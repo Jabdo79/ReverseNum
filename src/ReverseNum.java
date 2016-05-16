@@ -13,16 +13,20 @@ public class ReverseNum {
 
 		int num = 0, rev = 0;
 
-		System.out.print("Please enter a number: ");
-		num = input.nextInt();
-		
-		while (num > 0) {
-			rev = rev * 10;
-			rev = rev + num%10;
-			num = num/10;
+		try {
+			Scanner input = new Scanner(System.in);
+			System.out.print("Please enter a number: ");
+			num = input.nextInt();
+			while (num > 0) {
+				rev = rev * 10;
+				rev = rev + num % 10;
+				num = num / 10;
+			}
+			System.out.println("The reverse of your number is " + rev);
+			main(args);
+		} catch (Exception e) {
+			System.out.println("That wasn't a number, please try again.");
+			main(args);
 		}
-		
-		System.out.println("The reverse of your number is " + rev);
-		main(args);
 	}
 }
