@@ -7,21 +7,22 @@ import java.util.Scanner;
 
 public class ReverseNum {
 
-	static Scanner input = new Scanner(System.in);
-
 	public static void main(String[] args) {
 
 		int num = 0, rev = 0;
-
+		
+		//Use a try/catch block to prevent non-numerical inputs
 		try {
 			Scanner input = new Scanner(System.in);
 			System.out.print("Please enter a number: ");
 			num = input.nextInt();
+			//reverse number given by user via % and /
 			while (num > 0) {
 				rev = rev * 10;
 				rev = rev + num % 10;
 				num = num / 10;
 			}
+			//Print the result and run again
 			System.out.println("The reverse of your number is " + rev);
 			main(args);
 		} catch (Exception e) {
