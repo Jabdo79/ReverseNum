@@ -11,17 +11,15 @@ public class ReverseNum {
 	
 	public static void main(String[] args) {
 		
-		int num = 0;
+		double num = 0;
 		
-		try {
-			System.out.print("Please enter a number: ");
-			num = input.nextInt();
-			System.out.println("Your number is " + num);
-		} catch (Exception e) {
+		System.out.print("Please enter a number: ");
+		if (input.hasNextDouble()) {
+			num = input.nextDouble();
+		}
+		else {
 			System.out.println("That wasn't a number, please try again.");
 		}
 		
-
 	}
-
 }
