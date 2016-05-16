@@ -11,10 +11,18 @@ public class ReverseNum {
 
 	public static void main(String[] args) {
 
-		int num = 0;
+		int num = 0, rev = 0;
 
 		System.out.print("Please enter a number: ");
 		num = input.nextInt();
-		System.out.println("Your number is "+num);
+		
+		while (num > 0) {
+			rev = rev * 10;
+			rev = rev + num%10;
+			num = num/10;
+		}
+		
+		System.out.println("The reverse of your number is " + rev);
+		main(args);
 	}
 }
