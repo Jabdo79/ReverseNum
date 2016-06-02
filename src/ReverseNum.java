@@ -9,13 +9,13 @@ public class ReverseNum {
 
 	public static void main(String[] args) {
 
-		int num = 0, rev = 0;
+		long num = 0, rev = 0;
 		
 		//Use a try/catch block to prevent non-numerical inputs
 		try {
 			Scanner input = new Scanner(System.in);
 			System.out.print("Please enter a number: ");
-			num = input.nextInt();
+			num = input.nextLong();
 			//reverse number given by user via % and /
 			while (num > 0) {
 				rev = rev * 10;
@@ -25,8 +25,8 @@ public class ReverseNum {
 			//Print the result and run again
 			System.out.println("The reverse of your number is " + rev);
 			main(args);
-		} catch (Exception e) {
-			System.out.println("That wasn't a number, please try again.");
+		} catch (Exception e) {//catch any incompatible inputs
+			System.out.println("That wasn't a number or it was too long, please try again.");
 			main(args);
 		}
 	}
